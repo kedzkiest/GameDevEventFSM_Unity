@@ -339,47 +339,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4414602237343301344, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1300
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414602237343301344, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414602237343301344, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 309.99994
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414602237343301344, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -405
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916762694298739631, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1300
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916762694298739631, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916762694298739631, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916762694298739631, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 135
+    - target: {fileID: 6916762694298739633, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
+      propertyPath: m_fontSize
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6916762694298739633, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
-      propertyPath: m_text
-      value: 'Dialog Text
-
-        This is a samle text...
-
-        AAAA BBBB CCCC
-        DDDD'
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6916762694298739633, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6916762694298739633, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6916762694298739633, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 6916762694338472586, guid: 4b3d852067199eb4bb81573785f660c4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
