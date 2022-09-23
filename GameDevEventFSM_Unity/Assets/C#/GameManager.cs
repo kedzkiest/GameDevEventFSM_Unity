@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && enabled_to_skip)
         {
             frames_counter = 0;
-            //enabled_to_skip = false;
+            enabled_to_skip = false;
             isCalledOnce = false;
 
             // if message buffer is empty, then allow to update
