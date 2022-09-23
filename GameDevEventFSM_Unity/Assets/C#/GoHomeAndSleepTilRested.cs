@@ -21,7 +21,6 @@ public class GoHomeAndSleepTilRested : State
     {
         if(_Miner.Location() != Miner.EnumLocationType.SHACK)
         {
-            SMI = SingletonMessage.Instance();
             SMI.AddVal(BaseGameEntity.GetNameOfEntity(_Miner.GetID()) + ": " + "( Walking home )");
         }
 
@@ -34,7 +33,6 @@ public class GoHomeAndSleepTilRested : State
         if (!_Miner.Fatigued())
         {
             // send a string to the setter of SingletonMessage
-            SMI = SingletonMessage.Instance();
             SMI.AddVal(BaseGameEntity.GetNameOfEntity(_Miner.GetID()) + ": " +
                         "What a fantastic nap! Time to find more gold");
             // cout << "\n" << str;
