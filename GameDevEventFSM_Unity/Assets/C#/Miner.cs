@@ -31,7 +31,7 @@ public class Miner : BaseGameEntity
         carried_gold_amount = 0;
         money_in_bank = 0;
         fatigue = 0;
-        //CurrentState = GoHomeAndSleepTilRested.Instance();
+        CurrentState = GoHomeAndSleepTilRested.Instance();
     }
 
     public override void Update()
