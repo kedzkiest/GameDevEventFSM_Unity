@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GoHomeAndSleepTilRested : State
 {
-    public static GoHomeAndSleepTilRested instance;
+    private static GoHomeAndSleepTilRested instance = new GoHomeAndSleepTilRested();
 
     private SingletonMessage SMI = SingletonMessage.Instance();
 
@@ -21,7 +21,8 @@ public class GoHomeAndSleepTilRested : State
     {
         if(_Miner.Location() != Miner.EnumLocationType.SHACK)
         {
-            Debug.Log(BaseGameEntity.GetNameOfEntity(_Miner.GetID()) + ": " + "( Walking home )");
+            SMI = SingletonMessage.Instance();
+            SMI.AddVal(BaseGameEntity.GetNameOfEntity(_Miner.GetID()) + ": " + "( Walking home )");
         }
 
         _Miner.ChangeLocation(Miner.EnumLocationType.SHACK);
@@ -30,9 +31,10 @@ public class GoHomeAndSleepTilRested : State
     public override void Execute(Miner _Miner)
     {
         // if miner is not fatigued start to dig for nuggets again.
-        if (_Miner.Fatigued())
+        if (!_Miner.Fatigued())
         {
             // send a string to the setter of SingletonMessage
+            SMI = SingletonMessage.Instance();
             SMI.AddVal(BaseGameEntity.GetNameOfEntity(_Miner.GetID()) + ": " +
                         "What a fantastic nap! Time to find more gold");
             // cout << "\n" << str;
@@ -40,7 +42,6 @@ public class GoHomeAndSleepTilRested : State
             // switch to next state
             _Miner.ChangeState(EnterMineAndDigForNugget.Instance());
         }
-
         else
         {
             // sleep
@@ -48,6 +49,7 @@ public class GoHomeAndSleepTilRested : State
 
             // SetTextColor(FOREGROUND_RED| FOREGROUND_INTENSITY);
             // send a string to the setter of SingletonMessage
+            SMI = SingletonMessage.Instance();
             SMI.AddVal(BaseGameEntity.GetNameOfEntity(_Miner.GetID()) + ": " + "ZZZZ... ");
             // cout << "\n" << str;
         }

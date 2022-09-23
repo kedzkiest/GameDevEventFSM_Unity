@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnterMineAndDigForNugget : State
 {
-    public static EnterMineAndDigForNugget instance;
+    private static EnterMineAndDigForNugget instance = new EnterMineAndDigForNugget();
 
     private SingletonMessage SMI = SingletonMessage.Instance();
 

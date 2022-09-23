@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class VisitBankAndDepositGold : State
 {
-    public static VisitBankAndDepositGold instance;
+    private static VisitBankAndDepositGold instance = new VisitBankAndDepositGold();
 
     private SingletonMessage SMI = SingletonMessage.Instance();
 

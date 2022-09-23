@@ -22,10 +22,10 @@ public class Miner : BaseGameEntity
     private EnumLocationType enum_location;
     private int carried_gold_amount;
     private int money_in_bank;
-    private int fatigue;
+    public int fatigue;
 
 
-    public Miner(int id) : base(id)
+    public Miner(int id): base(id)
     {
         enum_location = EnumLocationType.SHACK;
         carried_gold_amount = 0;
@@ -40,13 +40,17 @@ public class Miner : BaseGameEntity
         {
             CurrentState.Execute(this);
         }
+        else
+        {
+            Debug.Log("current state is null");
+        }
     }
 
     public void ChangeState(State NewState)
     {
         // make sure both states are both valid before attempting to
         // call their methods
-        Assert.IsFalse(CurrentState != null && NewState != null, "current state or new state is invalid.");
+        Assert.IsTrue(CurrentState != null && NewState != null, "current state or new state is invalid.");
 
         // call the exit method of the existing state
         CurrentState.Exit(this);

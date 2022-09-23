@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class BaseGameEntity : MonoBehaviour
+public class BaseGameEntity
 {
     private int entity_id;
     private static int next_valid_id = 0;
+
+    public BaseGameEntity() { }
 
     public BaseGameEntity(int id)
     {
@@ -27,7 +29,7 @@ public class BaseGameEntity : MonoBehaviour
     private void SetID(int id)
     {
         // make sure the id is equal to or greater than the next available ID
-        Assert.IsFalse(id >= next_valid_id, "<BaseGameEntity::SetID>: invalid ID");
+        Assert.IsTrue(id >= next_valid_id, "<BaseGameEntity::SetID>: invalid ID");
 
         entity_id = id;
         next_valid_id = entity_id + 1;
