@@ -32,4 +32,22 @@ public class BaseGameEntity : MonoBehaviour
         entity_id = id;
         next_valid_id = entity_id + 1;
     }
+
+    public enum EnumEntityName{
+        Miner_Bob,
+        Wife_Elsa
+    };
+
+    public static string GetNameOfEntity(int n)
+    {
+        switch (n)
+        {
+            case (int)EnumEntityName.Miner_Bob:
+                return "Miner Bob";
+            case (int)EnumEntityName.Wife_Elsa:
+                return "Elsa";
+            default:
+                return "UNKNOWN!";
+        }
+    }
 }

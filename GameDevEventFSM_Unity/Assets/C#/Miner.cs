@@ -6,9 +6,9 @@ using UnityEngine.Assertions;
 
 public class Miner : BaseGameEntity
 {
-    const int comfort_level = 5;
-    const int max_nuggets = 3;
-    const int tiredness_threshold = 5;
+    public static readonly int comfort_level = 5;
+    public static readonly int max_nuggets = 3;
+    public static readonly int tiredness_threshold = 5;
 
     public enum EnumLocationType
     {
