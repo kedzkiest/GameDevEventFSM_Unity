@@ -19,6 +19,11 @@ Keyboard:
 
 https://user-images.githubusercontent.com/66341676/192093172-2e2cc172-a891-4ab6-8376-acf3e7c1c949.mp4
 
+### Copyright notice for materials used
+SE
+- serif3 from ポケットサウンド (https://pocket-se.info/)
+- Still In Love from OtoLogic (https://otologic.jp/)
+
 ### Developers
 
  - s1280188 Kaede Takahashi
