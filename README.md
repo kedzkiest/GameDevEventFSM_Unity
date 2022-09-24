@@ -4,7 +4,7 @@
 
 ### Description
 
-$(Your Game Description)
+Bob, a gold miner, wakes up today and spends his days mining gold, depositing it in the bank, and sleeping when he is tired.
 
 ### Features
 
