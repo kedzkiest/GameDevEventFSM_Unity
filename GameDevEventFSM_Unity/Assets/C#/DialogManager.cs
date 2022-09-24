@@ -13,19 +13,26 @@ public class DialogManager : MonoBehaviour
 
     private float msgSpeed = 0.01f;
 
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         DialogText.text = "";
+        audioSource = GetComponent<AudioSource>();
     }
 
     IEnumerator TypeDisplay()
     {
+        audioSource.Play();
+
         foreach(char item in msgText.ToCharArray())
         {
             DialogText.text += item;
             yield return new WaitForSeconds(msgSpeed);
         }
+        
+        audioSource.Stop();
     }
 
     public void SetText(string text)
