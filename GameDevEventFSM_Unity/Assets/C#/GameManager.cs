@@ -15,6 +15,13 @@ public class GameManager : MonoBehaviour
     private bool enabled_to_skip = false;
 
     public DialogManager dialogManager;
+    private string msgText;
+
+    public GameObject home_morning;
+    public GameObject home_night;
+    public GameObject mine;
+    public GameObject bank;
+    private GameObject currentBG;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +29,7 @@ public class GameManager : MonoBehaviour
         miner = new Miner(0);
         SMI = SingletonMessage.Instance();
         dialogManager.SetText("( Press Space Key to Continue )");
+        currentBG = home_morning;
     }
 
     private bool isCalledOnce = false;
@@ -40,6 +48,32 @@ public class GameManager : MonoBehaviour
             if (SMI.CheckEmpty())
             {
                 miner.Update();
+            }
+
+            msgText = SMI.GetVal();
+            if(msgText.Contains("What a fantastic nap! Time to find more gold!"))
+            {
+                currentBG.SetActive(false);
+                currentBG = home_morning;
+                currentBG.SetActive(true);
+            }
+            if(msgText.Contains("( Walking to the goldmine )"))
+            {
+                currentBG.SetActive(false);
+                currentBG = mine;
+                currentBG.SetActive(true);
+            }
+            if(msgText.Contains("( Going to the bank )"))
+            {
+                currentBG.SetActive(false);
+                currentBG = bank;
+                currentBG.SetActive(true);
+            }
+            if(msgText.Contains("( Walking home )"))
+            {
+                currentBG.SetActive(false);
+                currentBG = home_night;
+                currentBG.SetActive(true);
             }
 
             dialogManager.SetText(SMI.GetVal());

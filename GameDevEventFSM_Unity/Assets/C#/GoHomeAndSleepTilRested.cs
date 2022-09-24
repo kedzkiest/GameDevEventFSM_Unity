@@ -34,7 +34,7 @@ public class GoHomeAndSleepTilRested : State
         {
             // send a string to the setter of SingletonMessage
             SMI.AddVal(BaseGameEntity.GetNameOfEntity(_Miner.GetID()) + ": " +
-                        "What a fantastic nap! Time to find more gold");
+                        "What a fantastic nap! Time to find more gold!");
             // cout << "\n" << str;
 
             // switch to next state
