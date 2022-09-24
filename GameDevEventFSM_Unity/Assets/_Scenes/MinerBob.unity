@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 2025275592}
   - component: {fileID: 2025275591}
   m_Layer: 0
-  m_Name: AudioEffector
+  m_Name: BGMPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,7 +592,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4189dc4d0e9308949b4c46c05d547284, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
